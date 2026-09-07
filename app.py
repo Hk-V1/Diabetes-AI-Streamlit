@@ -165,7 +165,7 @@ professional assessment/testing where appropriate. End exactly with:
         config=types.GenerateContentConfig(
             temperature=0.2,
             max_output_tokens=2000,
-            thinking_config=types.ThinkingConfig(thinking_budget=0),
+            thinking_config=types.ThinkingConfig(thinking_level="low"),
         ),
     )
     text = response.text or ""
