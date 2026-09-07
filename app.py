@@ -163,9 +163,8 @@ professional assessment/testing where appropriate. End exactly with:
         model="gemini-3.6-flash",
         contents=prompt,
         config=types.GenerateContentConfig(
-            temperature=0.2,
             max_output_tokens=2000,
-            thinking_config=types.ThinkingConfig(thinking_level="low"),
+            thinking_config=types.ThinkingConfig(thinking_level="minimal"),
         ),
     )
     text = response.text or ""
