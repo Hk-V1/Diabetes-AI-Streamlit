@@ -164,7 +164,9 @@ professional assessment/testing where appropriate. End exactly with:
         contents=prompt,
         config=types.GenerateContentConfig(
             max_output_tokens=2000,
-            thinking_config=types.ThinkingConfig(thinking_level="minimal"),
+            thinking_config=types.ThinkingConfig(
+                thinking_level=types.ThinkingLevel.LOW
+            ),
         ),
     )
     text = response.text or ""
